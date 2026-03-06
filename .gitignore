@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+# Cursor / IDE
+.cursor/
+.vscode/
+
+# OS / temp
+*.log
+*.tmp
+
