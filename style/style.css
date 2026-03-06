@@ -24,7 +24,7 @@ html,
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 .app {
@@ -267,11 +267,15 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 999px;
+  overflow: hidden;
   background: #f1f1f1;
-  display: grid;
-  place-items: center;
-  color: #9a9a9a;
-  font-size: 14px;
+  display: block;
+}
+
+.profile__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile__meta {
