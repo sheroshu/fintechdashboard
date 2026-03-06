@@ -105,6 +105,12 @@ body {
   color: #b2b2b2;
 }
 
+.nav__icon img {
+  max-width: 18px;
+  max-height: 18px;
+  display: block;
+}
+
 .nav__item:hover {
   background: #fafafa;
 }
@@ -227,6 +233,12 @@ body {
   background: #fff;
   box-shadow: 0 10px 26px rgba(20, 20, 20, 0.02);
   color: #9a9a9a;
+}
+
+.iconBtn__inner img {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .profile {
