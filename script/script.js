@@ -49,8 +49,8 @@ function applySuccessRateCard() {
     const r = fgCircle.r.baseVal.value;
     const c = 2 * Math.PI * r;
     const pct = percent / 100;
-    // With round linecaps, near-100% progress visually closes the gap.
-    // Subtract a small "cap compensation" so 98% still shows a clear gap like the mock.
+    // Из‑за круглых концов линии почти 100% визуально закрывают разрыв.
+    // Поэтому чуть уменьшаем дугу, чтобы на 98% щель оставалась заметной, как в макете.
     const capCompensationPx = 14;
     const arc = Math.max(0, c * pct - capCompensationPx);
     const gap = Math.max(0, c - arc);

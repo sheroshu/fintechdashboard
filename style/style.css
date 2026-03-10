@@ -33,7 +33,7 @@ body {
   grid-template-columns: 240px 1fr;
 }
 
-/* Sidebar */
+/* Боковая навигация */
 .sidebar {
   background: #fff;
   padding: 28px 26px;
@@ -124,7 +124,7 @@ body {
   color: #9a9a9a;
 }
 
-/* Main / topbar */
+/* Основной контент и верхняя панель */
 .main {
   padding: 18px 28px 32px;
 }
@@ -298,7 +298,7 @@ body {
   justify-self: end;
 }
 
-/* Content */
+/* Блок основного содержимого */
 .content {
   display: grid;
   gap: 18px;
@@ -390,7 +390,7 @@ body {
   font-weight: 700;
 }
 
-/* Big chart */
+/* Большой график доходов */
 .chart {
   display: grid;
   grid-template-columns: 80px 1fr;
@@ -459,7 +459,7 @@ body {
   text-align: center;
 }
 
-/* Right panel */
+/* Правая панель со статистикой/сообщениями */
 .sidecard {
   background: transparent;
   border-radius: var(--radius-lg);
@@ -587,7 +587,7 @@ body {
   text-align: right;
 }
 
-/* Bottom row: Success rate + Payment issues */
+/* Нижний ряд: Success rate и Payment issues */
 .bottomRow {
   grid-area: bottom;
   display: grid;
@@ -605,7 +605,7 @@ body {
   margin-top: auto;
 }
 
-/* Donut */
+/* Кольцевая диаграмма успеха */
 .donut {
   width: 170px;
   height: 170px;
@@ -621,7 +621,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  /* place the gap at the top like the mock */
+  /* разрыв кольца сверху, как в макете */
   transform: rotate(-90deg);
 }
 
@@ -703,7 +703,7 @@ body {
   margin-top: -2px;
 }
 
-/* Mini chart + legend */
+/* Мини‑диаграмма ошибок и легенда */
 .miniChart {
   padding: 12px 10px 6px;
 }
@@ -811,7 +811,7 @@ body {
   background: #7bd3de;
 }
 
-/* Responsiveness */
+/* Адаптивная вёрстка */
 @media (max-width: 1100px) {
   .grid {
     grid-template-columns: 1fr;
