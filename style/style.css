@@ -358,6 +358,9 @@ body {
   grid-auto-rows: min-content;
   gap: 18px;
   align-items: start;
+  grid-template-areas:
+    "chart side"
+    "bottom side";
 }
 
 .card {
@@ -370,6 +373,7 @@ body {
 
 .card--wide {
   padding: 20px 18px 14px;
+  grid-area: chart;
 }
 
 .card__head {
@@ -462,6 +466,7 @@ body {
   border: 0;
   padding: 8px 0 0;
   box-shadow: none;
+  grid-area: side;
 }
 
 .sidecard__tabs {
@@ -582,15 +587,60 @@ body {
   text-align: right;
 }
 
+/* Bottom row: Success rate + Payment issues */
+.bottomRow {
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.bottomRow .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomRow .statsRow {
+  margin-top: auto;
+}
+
 /* Donut */
 .donut {
   width: 170px;
   height: 170px;
   margin: 14px auto 10px;
   border-radius: 999px;
-  background: conic-gradient(var(--green) 0 352.8deg, #e9f2e3 352.8deg 360deg);
   display: grid;
   place-items: center;
+  position: relative;
+}
+
+.donutSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* place the gap at the top like the mock */
+  transform: rotate(-90deg);
+}
+
+.donutSvg__bg,
+.donutSvg__fg {
+  fill: none;
+  stroke-width: 14;
+}
+
+.donutSvg__bg {
+  stroke: #e9f2e3;
+}
+
+.donutSvg__fg {
+  stroke: var(--green);
+  stroke-linecap: round;
+  stroke-dasharray: 0 9999;
+  stroke-dashoffset: 0;
+  transition: stroke-dasharray 250ms ease;
 }
 
 .donut__hole {
@@ -601,6 +651,8 @@ body {
   display: grid;
   place-items: center;
   border: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
 }
 
 .donut__value {
@@ -763,9 +815,13 @@ body {
 @media (max-width: 1100px) {
   .grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "chart"
+      "bottom"
+      "side";
   }
-  .sidecard {
-    order: 2;
+  .bottomRow {
+    grid-template-columns: 1fr;
   }
 }
 

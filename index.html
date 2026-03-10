@@ -238,58 +238,71 @@
               </div>
             </aside>
 
-            <section class="card">
-              <header class="card__head">
-                <h2 class="card__title">Success rate</h2>
-              </header>
+            <div class="bottomRow">
+              <section class="card">
+                <header class="card__head">
+                  <h2 class="card__title">Success rate</h2>
+                </header>
 
-              <div class="donut" role="img" aria-label="Success rate 98%">
-                <div class="donut__hole">
-                  <div class="donut__value">98%</div>
+                <div
+                  class="donut"
+                  role="img"
+                  aria-label="Success rate"
+                  data-success-rate="98"
+                  data-successful="150"
+                  data-unsuccessful="1"
+                >
+                  <svg class="donutSvg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="donutSvg__bg" cx="60" cy="60" r="52" />
+                    <circle class="donutSvg__fg" cx="60" cy="60" r="52" />
+                  </svg>
+                  <div class="donut__hole">
+                    <div class="donut__value" data-donut-value>98%</div>
+                  </div>
                 </div>
-              </div>
 
-              <div class="statsRow">
-                <div class="stat">
-                  <span class="dot dot--paleGreen" aria-hidden="true"></span>
-                  <div class="stat__num">1</div>
-                  <div class="stat__label">Unsuccessful</div>
+                <div class="statsRow">
+                  <div class="stat">
+                    <span class="dot dot--paleGreen" aria-hidden="true"></span>
+                    <div class="stat__num" data-unsuccessful>1</div>
+                    <div class="stat__label">Unsuccessful</div>
+                  </div>
+                  <div class="stat">
+                    <span class="dot dot--green" aria-hidden="true"></span>
+                    <div class="stat__num" data-successful>150</div>
+                    <div class="stat__label">Successful</div>
+                  </div>
                 </div>
-                <div class="stat">
-                  <span class="dot dot--green" aria-hidden="true"></span>
-                  <div class="stat__num">150</div>
-                  <div class="stat__label">Successful</div>
-                </div>
-              </div>
-            </section>
+              </section>
 
-            <section class="card">
-              <header class="card__head">
-                <h2 class="card__title">Payment issues</h2>
-              </header>
+              <section class="card">
+                <header class="card__head">
+                  <h2 class="card__title">Payment issues</h2>
+                </header>
 
-              <div class="miniChart" role="img" aria-label="Payment issues chart">
-                <div class="miniChart__bars" aria-hidden="true">
-                  <div class="mbar mbar--a" style="--h: 18%"><span class="mbar__n">1</span></div>
-                  <div class="mbar mbar--x" style="--h: 42%"><span class="mbar__n">5</span></div>
-                  <div class="mbar mbar--y" style="--h: 30%"><span class="mbar__n">3</span></div>
-                  <div class="mbar mbar--n" style="--h: 70%"><span class="mbar__n">10</span></div>
+                <div class="miniChart" role="img" aria-label="Payment issues chart">
+                  <div class="miniChart__bars" aria-hidden="true">
+                    <div class="mbar mbar--a" style="--h: 18%"><span class="mbar__n">1</span></div>
+                    <div class="mbar mbar--x" style="--h: 42%"><span class="mbar__n">5</span></div>
+                    <div class="mbar mbar--y" style="--h: 30%"><span class="mbar__n">3</span></div>
+                    <div class="mbar mbar--n" style="--h: 70%"><span class="mbar__n">10</span></div>
+                  </div>
+                  <div class="miniChart__x" aria-hidden="true">
+                    <span>a</span><span>x</span><span>y</span><span>n</span>
+                  </div>
                 </div>
-                <div class="miniChart__x" aria-hidden="true">
-                  <span>a</span><span>x</span><span>y</span><span>n</span>
-                </div>
-              </div>
 
-              <div class="issues">
-                <div class="issues__total">Total number of errors: <strong>19</strong></div>
-                <ul class="legend">
-                  <li class="legend__item"><span class="badge badge--a">a</span> Customer errors</li>
-                  <li class="legend__item"><span class="badge badge--x">x</span> Fraud blocks</li>
-                  <li class="legend__item"><span class="badge badge--y">o</span> Bank errors</li>
-                  <li class="legend__item"><span class="badge badge--n">n</span> System errors</li>
-                </ul>
-              </div>
-            </section>
+                <div class="issues">
+                  <div class="issues__total">Total number of errors: <strong>19</strong></div>
+                  <ul class="legend">
+                    <li class="legend__item"><span class="badge badge--a">a</span> Customer errors</li>
+                    <li class="legend__item"><span class="badge badge--x">x</span> Fraud blocks</li>
+                    <li class="legend__item"><span class="badge badge--y">o</span> Bank errors</li>
+                    <li class="legend__item"><span class="badge badge--n">n</span> System errors</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
           </div>
         </section>
       </main>
